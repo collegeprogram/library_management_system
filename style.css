@@ -1,0 +1,12 @@
+*{
+    background-color: aqua;
+}
+
+div{
+    text-align: right;
+}
+
+#image{
+    border: 2px solid black;
+    margin: 5px 50px 50px 25px;
+}
