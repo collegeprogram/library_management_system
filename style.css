@@ -1,5 +1,4 @@
 *{
-    background-color: aqua;
 }
 
 div{
@@ -8,5 +7,21 @@ div{
 
 #image{
     border: 2px solid black;
-    margin: 5px 50px 50px 25px;
+    margin: 5px 50px 20px 25px;
+}
+.book{
+    border: 2px solid black;
+    height: 300px;
+    width: 300px;
+    border-radius: 25px;
+    margin: 10px 10px 20px 50px
+}
+h1{
+    height: 50px;
+    width: 1000px;
+    border: 2px solid black;
+    border-radius: 25px;
+    text-align: center;
+    margin: 0px 0px 20px 50px;
+    background-color: pink;
 }
