@@ -1,0 +1,41 @@
+body{
+    background-image: url(interest2image.jpg);
+    background-size: contain;
+}
+h1{
+    height: 70px;
+    width: 1000px;
+    color: rgb(44, 29, 172);
+    background-color: rgb(62, 243, 243);
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 25px;
+    margin: 50px 50px 50px 250px;
+    padding-top: 25px;
+}
+p{
+    height: 25px;
+    width: 600px;
+    color: rgb(23, 23, 23);
+    text-align: center;
+    background-color: #b0734d;
+    margin: 50px 50px 50px 200px;
+    border-radius: 25px;
+    border: 2px solid black;
+}
+.intrest{
+    height: 50px;
+    width: 200px;
+    background-color: rgb(192, 21, 84);
+    text-align: center;
+    display: inline-block;
+    margin: 50px;
+    text-decoration: none;
+    color: antiquewhite;
+    border-radius: 25px;
+    padding: 25px;
+    border: 2px rgb(235, 7, 7) black;
+}
+#special{
+    
+}

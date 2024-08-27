@@ -1,0 +1,44 @@
+body{
+    background-image: url(novel_image.jpg);
+    background-size: cover;
+}
+h1{
+    height: 50px;
+    width: 1000px;
+    background-color: rgb(232, 21, 109);
+    text-align: center;
+    padding-top: 20px;
+    border: 2px solid black;
+    border-radius: 30px;
+    color: azure;
+    margin: 20px 50px 50px 200px;
+}
+p{
+    height: 20px;
+    width: 400px;
+    background-color: aquamarine;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding-left: 10px;
+    margin-left: 50px;
+}
+.novel{
+    height: 400px;
+    width: 300px;
+    border: 2px solid black;
+    border-radius: 25px;
+}
+button{
+    height: 50px;
+    width: 100px;
+    border-radius: 20px;
+    display: inline-block;
+    position: relative;
+    margin: 25px;
+    bottom: 200px;
+}
+a{
+    text-decoration: none;
+    color: rgb(243, 8, 8);
+    border-radius: 20px;
+}
