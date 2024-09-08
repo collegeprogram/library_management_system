@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <style type="text/css">
+        *
+        {
+            margin: 0;
+        }
+        body
+        {
+            background-image: url(signup_background.jpg);
+            background-size: cover;
+            width:500;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        form
+        {
+            width: 190px;
+            height: auto;
+            padding: 40px;
+            border-radius: 10px;
+            background: #cba2b8;
+            position: relative;
+            right: 600px;
+        }
+        h1{
+        position: relative;
+        bottom: 300px;
+        height: 40px;
+        margin: 25px;
+        width: 1000px;
+        text-align: center;
+        background-color: aqua;
+        border-radius: 25px;
+        padding-top: 5px;
+        padding-bottom: 20px;
+        margin-left: 100px;
+
+        }
+        #submit{
+            color: rgb(18, 11, 227);
+            background-color: azure;
+            position: relative;
+            left: 50px;
+        }
+        #Account{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sign Up Page</h1>
+    <form name="submit-to-google-sheet">
+        <label>Name:</label><br>
+        <input type="text" name="name" placeholder="Enter Your Name" required><br><br>
+        <label>Email:</label><br>
+        <input type="email" name="email"placeholder="Enter Your Email"  required><br><br>
+        <label>Phone No:</label><br>
+        <input type="phone" name="phone no."placeholder="Enter Your Phone No."  required ><br><br>
+        <label>Password:-</label>
+        <input type="password" name = "Password" placeholder="Enter Your Password"><br><br>
+        <input type="submit" name="submit" id="submit"><br><br>
+        <p>Already Have An Account??<br><a href="login.html" id="Account">Login here!!</a></p>
+        <span id="success"></span>
+    </form>
+    
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzxgwbU2ok4uhpOk-kTNNH8LHP0vlhZl09IHRcNsTOfSKffInIC1hlCA2g3Q-iwfaLN3g/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const success = document.getElementById('success');
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                success.innerHTML="data successfully submitted thank you,Now you are able to login";
+
+                setTimeout(function()
+            {
+                success.innerHTML="";
+            },5000)
+            form.reset();
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+</html>
