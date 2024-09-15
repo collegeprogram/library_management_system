@@ -16,12 +16,15 @@ h1{
 p{
     height: 25px;
     width: 600px;
-    color: rgb(23, 23, 23);
+    color: rgb(25, 15, 15);
     text-align: center;
-    background-color: #b0734d;
+    background-color: #db6797;
     margin: 50px 50px 50px 200px;
     border-radius: 25px;
     border: 2px solid black;
+    position: relative;
+    left: 300px;
+
 }
 .intrest{
     height: 50px;

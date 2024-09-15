@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Library Management System</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+
+    <section class="contact-section">
+        <h2>Get In Touch</h2>
+        <p>If you have any questions, suggestions, or need assistance, feel free to reach out to us using the form below. We’re always here to help and would love to hear from you!</p>
+
+        <form name="submit-to-google-sheet">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label>Gender</label>
+            <div class="radio-group">
+                <input type="radio" id="male" name="gender" value="Male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="Female">
+                <label for="female">Female</label>
+                <input type="radio" id="other" name="gender" value="Other">
+                <label for="other">Other</label>
+            </div>
+
+            <label for="phone">Phone No</label>
+            <input type="tel" id="phone" name="phone no." placeholder="Enter your phone number" required>
+
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" placeholder="Write your message here..." rows="6" required></textarea>
+
+            <button type="submit">Submit</button>
+            <span id="success"></span>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Library Management System. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzxgwbU2ok4uhpOk-kTNNH8LHP0vlhZl09IHRcNsTOfSKffInIC1hlCA2g3Q-iwfaLN3g/exec';
+        const form = document.forms['submit-to-google-sheet'];
+        const success = document.getElementById('success');
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    success.innerHTML = "Data successfully submitted. Thank you!";
+                    setTimeout(() => {
+                        success.innerHTML = "";
+                    }, 5000);
+                    form.reset();
+                })
+                .catch(error => console.error('Error!', error.message));
+        });
+    </script>
+</body>
+</html>

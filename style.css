@@ -1,23 +1,58 @@
-*{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-div{
+body {
+    font-family: Arial, sans-serif;
+}
+
+div {
     text-align: right;
+    background-color: #333;
+    padding: 10px;
 }
 
-#image{
+.bar {
+    padding: 14px 20px;
+    background-color: #333;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.bar a {
+    color: white;
+    text-decoration: none;
+}
+
+.bar:hover {
+    background-color: #575757;
+}
+
+#navbar {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+#image {
     border: 2px solid black;
     margin: 5px 50px 20px 25px;
     width: 98%;
 }
-.book{
+
+.book {
     border: 2px solid black;
     height: 300px;
     width: 300px;
     border-radius: 25px;
-    margin: 10px 10px 20px 50px
+    margin: 10px 10px 20px 50px;
 }
-h1{
+
+h1 {
     height: 50px;
     width: 1000px;
     border: 2px solid black;
@@ -26,3 +61,36 @@ h1{
     margin: 0px 0px 20px 50px;
     background-color: pink;
 }
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+}
+
+footer a:hover {
+    color: #f1c40f;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+}
+
+.footer-links {
+    margin-bottom: 15px;
+}
+
